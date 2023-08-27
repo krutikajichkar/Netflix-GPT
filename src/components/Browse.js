@@ -1,8 +1,14 @@
 import React from 'react'
+import useNowPlayingMovies from '../customHooks/useNowPlayingMovies'
+import MainContainer from './MainContainer';
+
 
 const Browse = () => {
+ useNowPlayingMovies();
   return (
-    <div>Browse</div>
+    <div>
+      <MainContainer/>
+    </div>
   )
 }
 

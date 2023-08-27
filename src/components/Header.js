@@ -19,7 +19,7 @@ const Header = () => {
   };
   return (
     <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center py-6 px-8  ">
-      <h1 className="text-4xl font-bold text-red-600 text-left">NETFLIX</h1>
+      <h1 className="text-4xl font-bold text-red-600 text-left z-10">NETFLIX</h1>
       {currentUser && (
         <div className="">
           <button className="outline-none border-none" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
