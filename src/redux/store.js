@@ -5,6 +5,6 @@ import movieSlice from "./movieSlice"
 export const store = configureStore({
     reducer:{
         user : userSlice ,
-        nowPlaying : movieSlice,
+        movies : movieSlice,
     }
 })

@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import { useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 import { auth } from "../Firebase";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const currentUser = auth.currentUser;
@@ -18,8 +19,8 @@ const Header = () => {
       });
   };
   return (
-    <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center py-6 px-8  ">
-      <h1 className="text-4xl font-bold text-red-600 text-left z-10">NETFLIX</h1>
+    <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center py-6 px-8 z-10 ">
+     <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="Netflix_logo" />
       {currentUser && (
         <div className="">
           <button className="outline-none border-none" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
@@ -29,6 +30,7 @@ const Header = () => {
               alt="profile"
             />
           </button>
+          <button onClick={signoutHandler} className="cursor-pointer">signout</button>
           {isDropdownOpen && (
             <div className="bg-red-100 rounded-lg px-4 py-2 absolute right-3 cursor-pointer text-lg text-left ">
               <ul>
